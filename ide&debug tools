@@ -1,0 +1,68 @@
+Sublime Text 2（Sublime Text官网  http://www.sublimetext.com/）
+
+常用快捷键
+
+1.Goto Anything   查找（Ctrl+P)
+    • 直接输入文件名，可进行模糊查找
+    • ：+行号，直接跳到指定的行号(查找某一行有一个快捷键 Ctrl+G，直接输入行号即可)
+    • @ +函数名，快速查找到制定的函数，@+CSS选择器名，快速查找样式（有一个直接的快捷键 Ctrl+R）
+    • # +关键字，就能匹配到关键字（有一个直接的快捷键 Ctrl+；）
+
+2.命令面板（Ctrl+Shift+P）
+   输入关键字，通过模糊匹配找到想要的命令，这样就不需要记住很多命令
+   比如想关掉/打开边栏，就输入side,找到匹配到的side bar,回车即可。可以看到快捷键是Ctrl+K Ctrl+B
+
+3.多行选择（Ctrl+D，Ctrl+Shift+L）
+    •向下同时选中下一个相同的文本 (反复按Ctrl+D）
+    • 一次性选择全部的相同文本 (Alt+F3）
+    •跳过当前选中的这个，选择下一个（Ctrl+K Ctrl+D）
+
+4.常用插件
+   首先要安装Package Control
+   安装方法：打开View（ctrl+`）>Show Console,打开Package Control的地址（https://packagecontrol.io/installation#st2），
+   在这里找到需要粘贴到Console的代码 ，然后回车即开始安装。安装完成后，重启ST，打开ST后，若安装成功则在Preferences下面
+   能找到Package Control，打开Package Control命令面板，输入你想要安装的插件名称，然后回车即开始自动安装。
+  常用的插件：
+    •Emmet(关于如何使用Emmet快速编写html和css，参考http://www.iteye.com/news/27580)
+    •DocBlockr（提供文件注释，方便后期根据注释生成API文档，输入 “/**” + enter调出注释模板 (在function的上面一行才有效果)     
+    •SideBarEnhancements（现在只支持SublimeText3了）
+     现在在Sublime Text 2中已经搜索不到这个插件了，如果是Sublime Text 2 需要手动安装这个插件，在网上下载这个插件，然
+     后通过菜单中Preferences -> Browse Packages 找到插件目录，然后把插件解压放到这个目录下即可(可能需要重启Sublime)。
+    •Terminal（允许在Sublime Text2中打开cmd命令窗口，很实用的一个插件，安装好该插件好，打开cmd命令窗口的快捷键是Ctrl+Shift+T）
+     更多插件下载地址：https://packagecontrol.io/
+
+5.快速新建一个html文件的方法
+  新建一个文件（Ctrl+N），当我们想要把文件语法设置为html时，总是不厌其烦的打开右下角的Plain Text,然后再找到html，这个过程重复性太高。比较快捷的方式是打开命令面板（Ctrl+Shift+P），然后输入ss：html进行模糊匹配，找到Set Syntax：HTML 回车即可，其他的文件类型设置类似。（当我听了慕课老师的这个快捷方法，当时心里真的很激动，把我解放了，哈哈哈~~）如果安装了Emmet，输入！或者html：5,再按Tab键就能自动补全html代码，很省事，有木有！
+
+6.注释
+  ctrl+/ 单行注释（去掉某行的注释符号也是同样快捷键）
+  ctrl+shift+/块注释( 注释已选择内容)，sublime会自动根据语言选择注释方式。
+
+7.Snippets（把重复使用的代码建立成代码片段）
+  新建代码片段： tools>new Snippets
+  编写和保存snippet：
+    •在content标签里的CDATA的[]里编写代码片段的内容，即截图红色部分
+    •在tabTrigger标签里编写代码片段的关键字（这里可以理解为你给函数命名，通过关键字自动调用）
+    •在scope标签里编写该代码片段的使用文件范围
+  最后将文件保存时，后缀必须是.sublime-snippet，并且保存在默认的路径下，不能修改路径。
+  保存好之后，在任意一个html文件中输入代码片段的关键字然后按tab键就调用了！
+
+8.开启Vim兼容模式
+  Preferences>Settings-User，删除“ignored_packages”里的  "Vintage"
+
+9.Sublime Text 学习视频网址推荐
+  国外的一个Sublime Text2教学视频  http://code.tutsplus.com/courses/perfect-workflow-in-sublime-text-2
+  最近在看慕课网上的Sublime Text3入门视频，个人觉得讲的不错的。http://www.imooc.com/learn/333
+
+10.调试工具
+   大多数的浏览器都自带调试工具，它们大同小异。个人比较喜欢用FireFox和Chrome。
+    F12打开浏览器的调试工具，在页面制作中，主要是查看Elements面板，查看html和css，通过增删改查来调试。活用放大镜查看你想看的元素，就能看到这个元素对应的html
+和css。
+    IE8+的IE浏览器自带的调试工具能够调试IE5，7至你现在安装的IE版本之间的任意版本。
+    IE6的效果可以安装IE Tester，如果你想调试，就必须安装IE6原生的浏览器和安装Internet Explorer Developer Toolbar。
+    
+    btw:使用调试工具就是熟能生巧，多看，多练。
+        Chrome调试器文档：https://developer.chrome.com/devtools
+        FireFox调试器文档：https://developer.mozilla.org/zh-CN/docs/Tools/Debugger
+        FireBug:http://getfirebug.com/
+        IE调试器文档：https://msdn.microsoft.com/library/bg182326(v=vs.85).aspx
